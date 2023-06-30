@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void Menuproductos(int ID[8], char nombre[8][50], int cantidad[8], float precio[8], char descripcion[8][50], int valor, int i)
+void Menuproductos(int ID[8], char nombre[8][80], int cantidad[8], float precio[8], char descripcion[8][80], int valor, int i)
 {
     printf("                                  Productos\n");
     printf("ID      |         Nombre        |   Cantidad     |         Precio            Descripcion\n");
@@ -13,11 +13,11 @@ void Menuproductos(int ID[8], char nombre[8][50], int cantidad[8], float precio[
     }
 }
 
-int IngresarNuevoProducto(char nombre[8][50], char descripcion[8][50], int cantidad[8], float precio[8], int valor, int i)
+int IngresarNuevoProducto(char nombre[8][80], char descripcion[8][80], int cantidad[8], float precio[8], int valor, int i)
 {
     printf("                     Ingreso de Producto\n");
     printf("Nombre del producto\n");
-    scanf(" %c", nombre[valor]);
+    scanf("%s", &nombre[valor]);
     printf("Descripcion del producto\n");
     scanf("%s", &descripcion[valor]);
     printf("Ingresa la cantidad\n");
@@ -45,7 +45,7 @@ void ModificarProduc(int ID[8], int cantidad[8], float precio[8], int barras, in
     }
 }
 
-void Eliminar(int ID[8], char nombre[8][50], int cantidad[8], float precio[8], int barras, int i)
+void Eliminar(int ID[8], char nombre[8][80], int cantidad[8], float precio[8], int barras, int i)
 {
     printf("=============================Eliminacion del Producto===========================================\n");
     printf("Escribe el ID  del producto que quieres eliminar\n");
